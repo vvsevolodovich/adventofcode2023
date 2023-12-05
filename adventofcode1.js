@@ -1,7 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 
-const getCalibarion = (line) => {
+const getCalibration = (line) => {
     const numbers = line.replace(/\D/g, '');
     const first = numbers[0];
     const second = numbers[numbers.length-1];
@@ -18,8 +18,8 @@ function main() {
     let sum = 0;
 
     rl.on('line', (line) => {
-        console.log(`Line from file: ${getCalibarion(line)}`);
-        sum += getCalibarion(line);
+        console.log(`Line from file: ${getCalibration(line)}`);
+        sum += getCalibration(line);
     });
 
     rl.on('close', () => {
